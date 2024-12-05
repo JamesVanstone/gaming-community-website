@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [".codeinstitute-ide.net"]
-
+CSRF_TRUSTED_ORIGINS = ["https://*.codeinstitute-ide.net"]
 
 # Application definition
 
