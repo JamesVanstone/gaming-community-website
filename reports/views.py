@@ -9,4 +9,4 @@ from .models import Mission
 
 class HomePage(generic.ListView):
     queryset = Mission.objects.all()
-    template_name = "home_page.html"
+    template_name = "reports/home_page.html"

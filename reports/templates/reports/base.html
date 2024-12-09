@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/ec1913ece6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+    <title>Gaming Community Website</title>
+</head>
+<body>
+    <nav>
+        <a href="">Legio XXIV</a>
+        <ul id="mobileNav">
+            <a href="/missions">Missions</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/profile">Profile</a>
+        </ul>
+        <i class="fa fa-bars burger"></i>
+    </nav>
+
+    {% block content %}
+    <!-- Content goes here -->
+    {% endblock content %}
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
