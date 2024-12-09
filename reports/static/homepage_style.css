@@ -24,6 +24,7 @@
     background-color: #000000dd;
     padding: 20px;
     border-radius: 8px;
+    margin: 10px 0;
 }
 
 .mission h1 {
@@ -41,9 +42,12 @@
 @media screen and (min-width: 1024px) {
     .mission-list {
         top: 0px;
-        padding: 20px 20px 20px 20px;
+        padding: 0px 20px;
         width: 65%;
         /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,212,255,0) 100%); */
+    }
+    .mission {
+        margin: 20px 0;
     }
     .mission-list h1 {
         text-align: left;
