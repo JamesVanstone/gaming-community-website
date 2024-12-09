@@ -1,11 +1,17 @@
 {% extends "reports/base.html" %}
 
+{% block additional-styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'homepage_style.css' %}">
+{% endblock additional-styles %}
+
 {% block content %}
-    <ul>
+    <div class="hero"></div>
+    <ul class="mission-list">
         {% for mission in object_list %}
-            <li>
-                <h1>Mission: {{ mission.date }}</h1>
-                {{ mission.summary }}
+            <li class="mission">
+                <h1>Mission {{ mission.date }}</h1>
+                <p>{{ mission.summary }}</p>
             </li>
         {% endfor %}
     </ul>
