@@ -12,10 +12,17 @@ nav {
 }
 
 nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    min-width: 190px;
+    justify-content: center;
+    z-index: 1;
     display: none;
     list-style: none;
     padding: 0;
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* General Styles */
@@ -45,6 +52,11 @@ h1 {
 @media screen and (min-width: 640px) {
     nav ul {
         display: block;
+        position: inherit;
+        top: inherit;
+        right: inherit;
+        min-width: inherit;
+        justify-content: center;
     }
     nav .burger {
         display: none;
