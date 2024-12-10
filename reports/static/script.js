@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Ensure the menu resets correctly on window resize
     window.addEventListener('resize', () => {
-        if (window.innerWidth >= 700) {
-            menu.style.display = 'block';
+        if (window.innerWidth >= 820) {
+            menu.style.display = 'flex';
         } else {
             menu.style.display = 'none';
         }

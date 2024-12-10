@@ -32,6 +32,17 @@ nav {
     padding-inline: 10px;
 }
 
+.mobile-nav {
+    display: flex;
+}
+
+nav .username {
+    font-size: 15px;
+    align-self: center;
+    max-width: 136px;
+    text-align: center;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -61,9 +72,9 @@ nav .mobile-nav {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 820px) {
     nav .mobile-nav {
-        display: block;
+        display: flex;
         position: inherit;
         top: inherit;
         right: inherit;
@@ -78,7 +89,7 @@ nav .mobile-nav {
     }
   }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1080px) {
     nav {
         font-size: 40px;
     }
