@@ -10,6 +10,10 @@ body {
 
 a {
     color: inherit;
+    text-decoration: underline;
+}
+
+nav a {
     text-decoration: none;
 }
 

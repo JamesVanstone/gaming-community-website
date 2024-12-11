@@ -3,4 +3,9 @@ from .models import Location, Mission, Mission_Type
 # Register your models here.
 admin.site.register(Location)
 admin.site.register(Mission_Type)
-admin.site.register(Mission)
+
+class MissionAdmin(admin.ModelAdmin):
+    list_display = ("__str__", "location", "date", "type", "pay", "approved",)
+    list_editable = ("location", "date", "type", "pay", "approved",)
+
+admin.site.register(Mission, MissionAdmin)
