@@ -74,14 +74,18 @@ nav .mobile-nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
+    padding: 10px 0;
+    border-bottom-left-radius: 5px;
 }
 
 .messages {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #000000dd;
+    border-radius: 5px;
     font-size: 15px;
     padding: 10px;
     margin: 10px;
+    list-style: none;
 }
 
 @media screen and (min-width: 820px) {
@@ -92,6 +96,9 @@ nav .mobile-nav {
         right: inherit;
         min-width: inherit;
         justify-content: center;
+        background-color: transparent;
+        padding: 0;
+        border-bottom-left-radius: 0;
     }
     .mobile-nav a {
         padding-inline: 5px;
