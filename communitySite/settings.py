@@ -30,8 +30,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-ALLOWED_HOSTS = [".codeinstitute-ide.net"]
-CSRF_TRUSTED_ORIGINS = ["https://*.codeinstitute-ide.net"]
+ALLOWED_HOSTS = [".codeinstitute-ide.net", ".herokuapp.com"]
+CSRF_TRUSTED_ORIGINS = ["https://*.codeinstitute-ide.net", "https://*.herokuapp.com"]
 
 # Application definition
 
