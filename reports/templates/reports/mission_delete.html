@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block additional-styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'homepage_style.css' %}">
+<link rel="stylesheet" href="{% static 'missions_style.css' %}">
+{% endblock additional-styles %}
+
+{% block content %}
+    <div class="hero"></div> 
+    <form method="post">{% csrf_token %}
+        <p>Are you sure you want to delete "{{ object }}"?</p>
+        {{ form }}
+        <input type="submit" value="Confirm">
+    </form>
+{% endblock %}

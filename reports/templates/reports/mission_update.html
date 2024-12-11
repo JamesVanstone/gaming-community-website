@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block additional-styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'homepage_style.css' %}">
+<link rel="stylesheet" href="{% static 'missions_style.css' %}">
+{% endblock additional-styles %}
+
+{% block content %}
+    <div class="hero"></div> 
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+        <div>
+            {% for field in fields %}
+                <input type="text">
+            {% endfor %}
+        </div>
+    </form>
+    <div class="form"></div>
+{% endblock %}
