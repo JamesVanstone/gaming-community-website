@@ -43,6 +43,13 @@
     top: 300px;
     position:relative;
     padding: 10px 10px 0px 10px;
+    text-align: center;
+}
+
+.welcome img {
+    display: block;
+    margin: 10px auto;
+    width: 180px;
 }
 
 @media screen and (min-width: 1024px) {

@@ -11,20 +11,20 @@
     <ul class="mission-list">
         {% if user.is_authenticated %}
             <li class="my-reports">
-                <a href = "/my_reports">My Reports</a>
+                My Reports | 
                 <a href="mission/create/">Create</a>
             </li>
         {% endif %}
         {% for mission in object_list %}
             <li class="mission">
                 <h1>
-                    Mission {{ mission.date }} - 
-                    <a href="mission/{{ mission.pk }}/edit/">Edit</a> <a href="mission/{{ mission.pk }}/delete/">Delete</a>
-                </h1>
-                <h2>
+                    Mission {{ mission.date }}
+                    <br> 
+                    <a href="mission/{{ mission.pk }}/edit/">Edit</a> | <a href="mission/{{ mission.pk }}/delete/">Delete</a>
+                    <br>
                     {% if mission.approved %}Report Approved
                     {% else %}Report Pending Review {% endif %}
-                </h2>
+                </h1>
                 <p>Pay: {{ mission.pay }} Denarii</p>
                 <p>Location: {{ mission.location }}</p>
                 <p>Type: {{ mission.type }}</p>
