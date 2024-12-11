@@ -13,7 +13,7 @@ class HomePage(generic.ListView):
     template_name = "reports/home_page.html"
 
 class MissionsPage(generic.ListView):
-    queryset = Mission.objects.filter(approved=True)
+    queryset = Mission.objects.filter(approved=True).order_by('-date')
     paginate_by = 2
     model = Mission
     template_name = "reports/missions_page.html"
