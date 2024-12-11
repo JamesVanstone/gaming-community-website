@@ -39,6 +39,10 @@
     font-family: "Times New Roman";
 }
 
+.welcome {
+    margin: 10px;
+}
+
 @media screen and (min-width: 1024px) {
     .mission-list {
         top: 0px;
