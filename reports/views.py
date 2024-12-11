@@ -18,7 +18,7 @@ class MissionsPage(generic.ListView):
     template_name = "reports/missions_page.html"
 
 class MyReportsPage(generic.ListView):
-    queryset = Mission.objects.filter(approved=True)
-    paginate_by = 2
     model = Mission
     template_name = "reports/my_reports_page.html"
+    def get_queryset(self):
+        return Mission.objects.filter(author=self.request.user)

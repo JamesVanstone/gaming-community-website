@@ -23,6 +23,7 @@ class Mission(models.Model):
     type = models.ForeignKey(Mission_Type, on_delete = models.PROTECT) # One to many relationship with mission types.
     participants = models.ManyToManyField(User, related_name='missions') # Many to many relationship with users
     approved = models.BooleanField(default=False)
+    author = models.ForeignKey(User, on_delete = models.SET_NULL, null=True)
 
     def __str__(self):
         return "Mission " + str(self.date)
