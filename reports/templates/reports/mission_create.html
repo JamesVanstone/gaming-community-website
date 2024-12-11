@@ -2,15 +2,14 @@
 
 {% block additional-styles %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'homepage_style.css' %}">
-<link rel="stylesheet" href="{% static 'missions_style.css' %}">
+<link rel="stylesheet" href="{% static 'crud_style.css' %}">
 {% endblock additional-styles %}
 
 {% block content %}
-    <div class="hero"></div> 
+    <h1>Create Mission Report</h1>
     <form method="post">{% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Save">
+        <input type="submit" value="Save" class="submit">
         <div>
             {% for field in fields %}
                 <input type="text">
