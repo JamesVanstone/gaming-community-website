@@ -8,11 +8,11 @@ from .models import Mission
     #return HttpResponse("<h1> Hello World!</h1>")
 
 class HomePage(generic.ListView):
-    queryset = Mission.objects.all().order_by('-date')[:3]
+    queryset = Mission.objects.filter(approved=True).order_by('-date')[:3]
     template_name = "reports/home_page.html"
 
 class MissionsPage(generic.ListView):
-    queryset = Mission.objects.all()
+    queryset = Mission.objects.filter(approved=True)
     paginate_by = 2
     model = Mission
     template_name = "reports/missions_page.html"
