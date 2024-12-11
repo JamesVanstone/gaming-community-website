@@ -11,7 +11,7 @@
 }
 
 .mission-list {   
-    top: 300px;
+    top: 280px;
     position:relative;
     padding: 10px;
     /* background-color: #000000AA; */
@@ -40,7 +40,9 @@
 }
 
 .welcome {
-    margin: 10px;
+    top: 300px;
+    position:relative;
+    padding: 10px 10px 0px 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -55,5 +57,10 @@
     }
     .mission-list h1 {
         text-align: left;
+    }
+    .welcome {
+        position:inherit;
+        width:65%;
+        padding: 20px 20px 0px 20px;
     }
 }
