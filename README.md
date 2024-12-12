@@ -55,6 +55,7 @@ As per the pillars of agile:
 Below is the Entity Relationship Diagram for my project. The Gallery model was not implemented due to time constraints, but I kept it in the ERD.
 <details>
 <summary>ERD Image</summary>
+
 ![Entity Relationship Diagram](readme_images/erd.png) 
 </details>
 
@@ -62,11 +63,13 @@ Below is the Entity Relationship Diagram for my project. The Gallery model was n
 ### Wireframes
 <details>
 <summary>Desktop Wireframes</summary>
+
 ![Desktop Main Page Wireframe](readme_images/desktop_main_page.png)
 ![Desktop Login Page Wireframe](readme_images/desktop_login_page.png)
 </details>
 <details>
 <summary>Mobile Wireframes</summary>
+
 ![Mobile Main Page Wireframe](readme_images/mobile_main_page.png)
 ![Mobile Login Page Wireframe](readme_images/mobile_login_page.png)
 </details>
@@ -76,11 +79,13 @@ I selected a colour that looks nice on a black background, #c0952aff, and used i
 Accessibility was taken into account at every stage of development. All non-background images have alt texts and the pages are structured in a sensible manner with elements properly navigable with keyboard only. The project passed the chrome dev tools lighthouse accessibility checker with a score of 100% and 95% on accessabilitychecker.org. The main colour were selected to have high contrast to the backgrounds it appears on. I checked the colours manually using the colour blindness simulator on [color-blindness.com](https://www.color-blindness.com/coblis-color-blindness-simulator/).
 <details>
 	<summary>Accessibility Checks</summary>
+
 ![Lighthouse Accessibility Check](readme_images/lighthouse_accessibility.png)
 ![accessibilitychecker.org Accessibility audit](readme_images/accessibility_audit.png)
 </details>
 <details>
 <summary>Colour Blindness Tests</summary>
+
 ![red-blind protanopia](readme_images/red-blind_protanopia.png)
 ![blue-blind tritanopia](readme_images/blue-blind_tritanopia.png)
 ![green-blind deuteranopia](readme_images/green-blind_deuteranopia.png)
@@ -90,6 +95,7 @@ Accessibility was taken into account at every stage of development. All non-back
 ### Core Features (Must-Haves)
 <details>
 <summary>Admin panel</summary>
+
  ![Admin Panel](readme_images/admin-panel.png)
  </details>
 - As an Administrator I can use the admin panel so that I can manage users
@@ -97,6 +103,7 @@ Accessibility was taken into account at every stage of development. All non-back
 
 <details>
 <summary>Sign Up</summary>
+
  ![Sign Up](readme_images/sign_up.png)
  </details>
 - As a user I can sign up so that I have an account.
@@ -104,12 +111,14 @@ Accessibility was taken into account at every stage of development. All non-back
 	- User is not able to change their password without linking an email to their account. To change their password they have to use the reset password dialogue and put in their email. An admin should be able to change their password, but this isn't ideal. A better implementation would be good to have in the future where a user can edit their details from inside the website itself.
 <details>
 <summary>Create Report</summary>
+
  ![Create Report](readme_images/create_report.png)
  </details>
 - As a user I can make a mission report so that I can make mission reports
 	- Users can make, edit, update, and delete missions. Missions must be approved by administrators before showing in the main mission list.
 <details>
 <summary>View Missions</summary>
+
  ![View Missions](readme_images/view_missions.png)
  </details>
 - As a user I can view the mission reports so that I can read them.
@@ -121,12 +130,14 @@ Accessibility was taken into account at every stage of development. All non-back
 ### Advanced Features (Should-Haves)
 <details>
 <summary>My Missions</summary>
+
  ![My Missions](readme_images/my_missions.png)
  </details>
 - As a user I can open the mission reports page so that I can view players who attended and other details.
 	- Dedicated missions page is implemented. Details are displayed. Player can see their own approved and unapproved reports in the "my missions" page while logged in.
 <details>
 <summary>Edit Missions</summary>
+
  ![Edit Mission](readme_images/edit_mission.png)
  </details>
 - As a User I can open a nicely styled mission editor so that it is easier to use
@@ -147,6 +158,7 @@ ChatGPT was used to assist in my learning of Django. Anything the AI suggested w
 Website is responsive and loads quickly, with a lighthouse performance score of 94%.
 <details>
 	<summary>Lighthouse Performance</summary>
+
 ![Lighthouse Performance Check](readme_images/lighthouse_performance.png)
 </details>
 
@@ -160,6 +172,7 @@ There are other things that have been highlighted by the lighthouse performance 
 I used the [amiresponsive tool](https://ui.dev/amiresponsive) to test the website.
 <details>
 <summary>amiresponsive result</summary>
+
 ![amiresponsive](readme_images/amiresponsive.png)
 </details>
 
@@ -185,6 +198,7 @@ Files Tested:
 I used the [Code Institute Python Linter](https://pep8ci.herokuapp.com/) to validate my python code. The only errors I got were "line too long" and "whitespace" errors. I went through and fixed all the pep8 whitespace and line too long errors in my python code.
 <details>
 <summary>CI python Linter Example</summary>
+
 Before:
 ![CI Python Linter Before](readme_images/ci_python_linter_before.png)
 After:
