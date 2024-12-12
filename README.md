@@ -124,9 +124,6 @@ Accessibility was taken into account at every stage of development. All non-back
 - As a user I can view the mission reports so that I can read them.
 	- The home page displays the last 3 mission report summaries. The missions page has a paginated (2 per page) display of all approved mission reports including mission date, location, pay, type, summary, and participants.
 
-(Include all must-have features)  
-**Guidance:** Use this section as you complete Phase 2: Must User Stories Implementation & Testing. Document all the must-have features you implemented, explaining how they align with the user stories and acceptance criteria.
-
 ### Advanced Features (Should-Haves)
 <details>
 <summary>My Missions</summary>
@@ -152,7 +149,7 @@ Accessibility was taken into account at every stage of development. All non-back
 ## AI Tools Usage
 
 ### ChatGPT
-ChatGPT was used to assist in my learning of Django. Anything the AI suggested was cross-referenced with the Django documentation and with the W3Schools Django documentation.
+ChatGPT was used to assist in my learning of Django. Anything the AI suggested was cross-referenced with the Django documentation and with the W3Schools Django documentation. I used ChatGPT for generating some mission reports.
 ## Testing and Validation
 ### Testing Results
 Website is responsive and loads quickly, with a lighthouse performance score of 94%.
@@ -205,6 +202,26 @@ After:
 ![CI Python Linter After](readme_images/ci_python_linter_after.png)
 </details>
 
+#### Testing
+|Test|Pass|
+|----|----|
+|User can log in|Pass|
+|User can log out|Pass|
+|User can sign up|Pass|
+|Admin can view panel|Pass|
+|Admin can add records in admin panel|Pass|
+|Admin can edit records in admin panel|Pass|
+|Admin can remove records in admin panel|Pass|
+|User can view mission reports|Pass|
+|User can view their mission reports|Pass|
+|User can create new mission reports|Pass|
+|User can edit existing mission reports|Pass|
+|User can delete their mission reports|Pass|
+|User cannot edit, update or delete their other user's reports|Pass|
+|Missions page displays all mission details|Pass|
+|Missions page sorts missions by date|Pass|
+|Front page displays latest 3 missions by date|Pass|
+
 ## Deployment
 ### Deployment Process
 For a short time I did not realise that deploying static files to Heroku required the use of a package called "whitenoise". It took some help from my peers to figure out that I was missing the package, but once it was added things worked well.
@@ -219,12 +236,6 @@ For a short time I did not realise that deploying static files to Heroku require
 8. Go back to the Deploy tab and go to Manual Deploy
 9. Select "main" from dropdown and then click "Deploy Branch"
 ## Reflection on Development Process
-
-### Successes
-Effective use of AI tools, including GitHub Copilot and DALL-E, and how they contributed to the development process.
-
-### Challenges
-Describe any challenges faced when integrating AI-generated content and how they were addressed.
 
 ### Final Thoughts
 I found the project quite engaging once I was able to overcome my dificulties during week one and two of sprint 1. Some of it is a little rushed to meet the deadline, and I am keen to continue developing it in the future. I found the django documentation quite good and the w3schools django documentation was also useful. Many thanks to my facilitator Alex for his help and understanding, and to my fellow student Guy who helped me get the CRUD functionality implemented into my project.
