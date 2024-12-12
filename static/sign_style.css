@@ -1,0 +1,75 @@
+h1 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.sign-up-in-out {
+    text-align: center;
+    justify-self: center;
+    justify-content: self;
+    max-width: 820px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sign-up-in-out h1,
+.sign-up-in-out p {
+    width: 100%;
+}
+
+form {
+    display: inherit;
+    flex-wrap: inherit;
+    justify-content: inherit;
+}
+
+form label {
+    font-size: 20px;
+}
+
+form input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    min-height: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    background-color: #b3b3b3ff;
+    max-width: 820px;
+    margin:0;
+}
+
+ul {
+    list-style: none;
+}
+
+form button {
+    font-family: inherit;
+    max-width: 615px;
+    margin-top: 20px;
+    background-color: #c0952aff;    
+    font-size: 30px;
+    border-width: 0;
+}
+
+@media screen and (min-width: 820px) {
+    form input {
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    form label {
+        font-size: 30px
+    }
+
+    form button {
+        margin-top: 30px;
+    }
+}

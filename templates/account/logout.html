@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 {% load allauth i18n %}
+
+{% block additional-styles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sign_style.css' %}">
+{% endblock additional-styles %}
+
 {% block head_title %}
     {% trans "Sign Out" %}
 {% endblock head_title %}
 {% block content %}
-    <div style = "text-align:center">
+    <div class="sign-up-in-out">
         {% element h1 %}
             {% trans "Sign Out" %}
         {% endelement %}
