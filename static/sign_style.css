@@ -6,7 +6,6 @@ h1 {
 .sign-up-in-out {
     text-align: center;
     justify-self: center;
-    justify-content: self;
     max-width: 820px;
     display: flex;
     flex-wrap: wrap;
