@@ -5,12 +5,12 @@ from .models import Mission
 from django.contrib import messages
 
 # Create your views here.
-#def home_page_view(request):
-    #return HttpResponse("<h1> Hello World!</h1>")
+
 
 class HomePage(generic.ListView):
     queryset = Mission.objects.filter(approved=True).order_by('-date')[:3]
     template_name = "reports/home_page.html"
+
 
 class MissionsPage(generic.ListView):
     queryset = Mission.objects.filter(approved=True).order_by('-date')
@@ -18,11 +18,16 @@ class MissionsPage(generic.ListView):
     model = Mission
     template_name = "reports/missions_page.html"
 
+
 class MyReportsPage(generic.ListView):
     model = Mission
     template_name = "reports/my_reports_page.html"
+
     def get_queryset(self):
-        return Mission.objects.filter(author=self.request.user).order_by('-date')
+        return Mission.objects.filter(
+                author=self.request.user
+            ).order_by('-date')
+
 
 class EditReport(generic.UpdateView):
     model = Mission
@@ -40,6 +45,7 @@ class EditReport(generic.UpdateView):
     def form_valid(self, form):
         messages.success(self.request, 'Mission updated successfully.')
         return super().form_valid(form)
+
 
 class CreateReport(generic.CreateView):
     model = Mission
@@ -59,6 +65,7 @@ class CreateReport(generic.CreateView):
         messages.success(self.request, 'Mission created successfully.')
         return super().form_valid(form)
 
+
 class DeleteReport(generic.DeleteView):
     model = Mission
     template_name_suffix = "_delete"
@@ -67,4 +74,3 @@ class DeleteReport(generic.DeleteView):
     def form_valid(self, form):
         messages.success(self.request, 'Mission deleted successfully.')
         return super().form_valid(form)
-

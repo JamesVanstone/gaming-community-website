@@ -4,8 +4,12 @@ from .models import Location, Mission, Mission_Type
 admin.site.register(Location)
 admin.site.register(Mission_Type)
 
+
 class MissionAdmin(admin.ModelAdmin):
-    list_display = ("__str__", "location", "date", "type", "pay", "approved", "author")
+    list_display = (
+        "__str__", "location", "date", "type", "pay", "approved", "author"
+        )
     list_editable = ("location", "date", "type", "pay", "approved", "author")
+
 
 admin.site.register(Mission, MissionAdmin)
