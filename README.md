@@ -1,4 +1,5 @@
 # Gaming Community Website
+![amiresponsive](readme_images/amiresponsive.png)
 ## Overview
 [Deployed Project](https://jv-gaming-community-e5c0bcca0b46.herokuapp.com/)
 ### Purpose
