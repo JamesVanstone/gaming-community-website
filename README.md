@@ -1,133 +1,225 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Gaming Community Website
+## Overview
+[Deployed Project](https://jv-gaming-community-e5c0bcca0b46.herokuapp.com/)
+### Purpose
+My project involves the creation of a record keeping website for a gaming community. Its design is to facilitate storing of information about past events that the community has run and to help further immerse the players in the world of the game.
+#### Target Audience
+The target audience for my website is primarily for gaming community members looking to get more immersed in the world that is being created by the gaming community. It is also for community admins to have a record of what has been done previously and who was at what event to better facilitate creation of future events and stories.
+## User Stories
 
-Welcome James Vanstone,
+### Must-Have User Stories
+- As an Administrator I can use the admin panel so that I can manage users
+	- Administrator can log in.  
+	- Administrator can delete and create users.
+- As a user I can sign up so that I have an account.
+	- User can make an account  
+	- User can change their password
+- As a user I can make a mission report so that I can make mission reports
+	- Mission report displays in mission reports 
+	- Mission report can be approved by admins
+	- Mission reports display correctly when approved
+- As a user I can view the mission reports so that I can read them.
+	- Mission reports display in a paginated format.  
+	- User can view reports.
+### Should-Have User Stories
+- As a user I can open the mission reports page so that I can view players who attended and other details.
+	- Mission page displays players who attended mission.  
+	- Mission page displays mission report.
+- As a User I can open a nicely styled mission editor so that it is easier to use
+	- User can edit a mission without going into the admin panel.
+	- Data is correctly loaded into form.
+	- Editor is styled nicely in theme of the webpage.
+	- Player can only edit the reports they themselves wrote.
+### Could-Have User Stories
+*Note: due to time constraints, none of the could-have user stories were implemented. I had to stop at MVP.*
+- As a User I can Upload Images so that I can see them in the gallery
+	- Image can be uploaded.  
+	- Image needs to be approved by admin.  
+	- Accepted image displays in gallery.
+- As a user I can view the gallery so that I can see all the images.
+	- User can open the gallery view.
+	- Gallery view displays all approved images.
+- As an Administrator I can accept and delete images so that the gallery can be curated
+	- Administrator can accept posts.
+	- Posts display correctly in the gallery.
+	- Administrator can delete images.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Project Board & Agile Development Practices
+The implementation of Agile Development Practises was limited in this project due to the project duration only being one sprint long. Due to difficulties during the development period, some of the could-have user stories were not completed. Here is a link to the [Gaming Community Website Project Board](https://github.com/users/JamesVanstone/projects/2) which was used to track progress throughout the project, MoSCoW prioritization was used to ensure important features were prioritized.
+As per the pillars of agile:
+- Individuals over processes and tools. - Priority was put on seeking help when needed and going outside of the LMS to inform my development, rather than just doing things "by the book."
+- Working software over comprehensive documentation - I prioritized getting the MVP of Create Request Update and Delete functionality on the web-page over writing the documentation, as working software is more important than comprehensive documentation.
+- Customer collaboration over contract negotiation - I ensured that I had an open dialogue with my course facilitator in lieu of a customer, as this project is for the course. There wasn't really any contract negotiation.
+- Responding to change over following a plan - I adapted my plan due to difficulties in developing during the first two weeks of the project, dramatically scaling back the scope of the project to ensure that MVP could be hit.
+## Entity Relationship Diagram
+Below is the Entity Relationship Diagram for my project. The Gallery model was not implemented due to time constraints, but I kept it in the ERD.
+<details>
+<summary>ERD Image</summary>
+![Entity Relationship Diagram](readme_images/erd.png) 
+</details>
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Design Decisions
+### Wireframes
+<details>
+<summary>Desktop Wireframes</summary>
+![Desktop Main Page Wireframe](readme_images/desktop_main_page.png)
+![Desktop Login Page Wireframe](readme_images/desktop_login_page.png)
+</details>
+<details>
+<summary>Mobile Wireframes</summary>
+![Mobile Main Page Wireframe](readme_images/mobile_main_page.png)
+![Mobile Login Page Wireframe](readme_images/mobile_login_page.png)
+</details>
+From the beginning I decided to theme my website around a roman style. As such, I used the Cinzel font from google fonts as my headings font and for longer bits of text I used Times New Roman.
+I selected a colour that looks nice on a black background, #c0952aff, and used it as the main colour throughout the website. I initially had some issues with contrast, but adding a dark black background with a high alpha value #000000dd for any boxes.
+### Accessibility Considerations
+Accessibility was taken into account at every stage of development. All non-background images have alt texts and the pages are structured in a sensible manner with elements properly navigable with keyboard only. The project passed the chrome dev tools lighthouse accessibility checker with a score of 100% and 95% on accessabilitychecker.org. The main colour were selected to have high contrast to the backgrounds it appears on. I checked the colours manually using the colour blindness simulator on [color-blindness.com](https://www.color-blindness.com/coblis-color-blindness-simulator/).
+<details>
+	<summary>Accessibility Checks</summary>
+![Lighthouse Accessibility Check](readme_images/lighthouse_accessibility.png)
+![accessibilitychecker.org Accessibility audit](readme_images/accessibility_audit.png)
+</details>
+<details>
+<summary>Colour Blindness Tests</summary>
+![red-blind protanopia](readme_images/red-blind_protanopia.png)
+![blue-blind tritanopia](readme_images/blue-blind_tritanopia.png)
+![green-blind deuteranopia](readme_images/green-blind_deuteranopia.png)
+</details>
 
-## Gitpod Reminders
+## Features Implementation
+### Core Features (Must-Haves)
+<details>
+<summary>Admin panel</summary>
+ ![Admin Panel](readme_images/admin-panel.png)
+ </details>
+- As an Administrator I can use the admin panel so that I can manage users
+	- All acceptance criteria implemented successfully.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<details>
+<summary>Sign Up</summary>
+ ![Sign Up](readme_images/sign_up.png)
+ </details>
+- As a user I can sign up so that I have an account.
+	- User is able to sign up.
+	- User is not able to change their password without linking an email to their account. To change their password they have to use the reset password dialogue and put in their email. An admin should be able to change their password, but this isn't ideal. A better implementation would be good to have in the future where a user can edit their details from inside the website itself.
+<details>
+<summary>Create Report</summary>
+ ![Create Report](readme_images/create_report.png)
+ </details>
+- As a user I can make a mission report so that I can make mission reports
+	- Users can make, edit, update, and delete missions. Missions must be approved by administrators before showing in the main mission list.
+<details>
+<summary>View Missions</summary>
+ ![View Missions](readme_images/view_missions.png)
+ </details>
+- As a user I can view the mission reports so that I can read them.
+	- The home page displays the last 3 mission report summaries. The missions page has a paginated (2 per page) display of all approved mission reports including mission date, location, pay, type, summary, and participants.
 
-`python3 -m http.server`
+(Include all must-have features)  
+**Guidance:** Use this section as you complete Phase 2: Must User Stories Implementation & Testing. Document all the must-have features you implemented, explaining how they align with the user stories and acceptance criteria.
 
-A blue button should appear to click: _Make Public_,
+### Advanced Features (Should-Haves)
+<details>
+<summary>My Missions</summary>
+ ![My Missions](readme_images/my_missions.png)
+ </details>
+- As a user I can open the mission reports page so that I can view players who attended and other details.
+	- Dedicated missions page is implemented. Details are displayed. Player can see their own approved and unapproved reports in the "my missions" page while logged in.
+<details>
+<summary>Edit Missions</summary>
+ ![Edit Mission](readme_images/edit_mission.png)
+ </details>
+- As a User I can open a nicely styled mission editor so that it is easier to use
+	- Editor is well styled and easy to use.
+	- Editor is not rich-text.
+	- New posts need approval, but due to an oversight users can edit approved posts and they will remain approved. This should be fixed in a later version.
+### Optional Features (Could-Haves)
+*Note: due to time constraints, none of the could-have user stories were implemented. I had to stop at MVP.*
+- As a User I can Upload Images so that I can see them in the gallery
+- As a user I can view the gallery so that I can see all the images.
+- As an Administrator I can accept and delete images so that the gallery can be curated
+## AI Tools Usage
 
-Another blue button should appear to click: _Open Browser_.
+### ChatGPT
+ChatGPT was used to assist in my learning of Django. Anything the AI suggested was cross-referenced with the Django documentation and with the W3Schools Django documentation.
+## Testing and Validation
+### Testing Results
+Website is responsive and loads quickly, with a lighthouse performance score of 94%.
+<details>
+	<summary>Lighthouse Performance</summary>
+![Lighthouse Performance Check](readme_images/lighthouse_performance.png)
+</details>
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+During the testing process, I found a number of issues that I rectified.
+1. Images were in PNG format. Fixed by changing the background image and the logo image to .webp format.
+There are other things that have been highlighted by the lighthouse performance checker that I do not have time to action.
+1. Preconnecting google fonts origin
+2. Resizing the logo image.
+3. Not using fontawesome as their single icon I'm using for the burger menu is costing me 790ms.
+4. Find some way to reduce the size of my background image.
+I used the [amiresponsive tool](https://ui.dev/amiresponsive) to test the website.
+<details>
+<summary>amiresponsive result</summary>
+![amiresponsive](readme_images/amiresponsive.png)
+</details>
 
-A blue button should appear to click: _Make Public_,
+### Validation
+#### HTML W3C
+Validating HTML is harder than validating CSS in django, as the django template language doesn't have an easily available validator online.
+Instead, I am going to validate HTML by URL for the following URLs.
+- `/` - Passed after issue with stray `</img>` tag fixed.
+- `/missions`  - passed after issue with autoclosing stray `<p>` tag fixed.
+None of the other URLs in the project are able to validated by URL due to authentication issues. For the other pages, I am using the browser's "view page source" and pasting it into the validator.
+- Missions - Passed
+- Sign In - Passed.
+- Sign Up - Validator highlighted a number of issues in the source that are not actually present on manual inspection. This method of validation does not seem very good and I am stopping testing using it.
+#### CSS W3C
+During the validation process the validator highlighted one issue with the sign_style.css file where there was a `justify-content: self;` which is invalid. I fixed it.
+Files Tested:
+- style.css - Passed
+- sign_style.css - Passed
+- homepage_style.css - Passed
+- missions_style.css - Passed
+- crud_style.css - Passed
+#### Python
+I used the [Code Institute Python Linter](https://pep8ci.herokuapp.com/) to validate my python code. The only errors I got were "line too long" and "whitespace" errors. I went through and fixed all the pep8 whitespace and line too long errors in my python code.
+<details>
+<summary>CI python Linter Example</summary>
+Before:
+![CI Python Linter Before](readme_images/ci_python_linter_before.png)
+After:
+![CI Python Linter After](readme_images/ci_python_linter_after.png)
+</details>
 
-Another blue button should appear to click: _Open Browser_.
+## Deployment
+### Deployment Process
+For a short time I did not realise that deploying static files to Heroku required the use of a package called "whitenoise". It took some help from my peers to figure out that I was missing the package, but once it was added things worked well.
+### Deployment Steps
+1. Make an account on Heroku and redeem github student credits.
+2. Start a project and go to the Deploy tab.
+3. Select the "GitHub" deployment method.
+4. Connect your github and select the gaming-community-website repo.
+5. Go to the Settings tab and select Reveal Config Var
+6. Add a SECRET_KEY config var, generated securely.
+7. Add the DATABASE_URL config var with a link to the postgresql database.
+8. Go back to the Deploy tab and go to Manual Deploy
+9. Select "main" from dropdown and then click "Deploy Branch"
+## Reflection on Development Process
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Successes
+Effective use of AI tools, including GitHub Copilot and DALL-E, and how they contributed to the development process.
 
-To log into the Heroku toolbelt CLI:
+### Challenges
+Describe any challenges faced when integrating AI-generated content and how they were addressed.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Final Thoughts
+I found the project quite engaging once I was able to overcome my dificulties during week one and two of sprint 1. Some of it is a little rushed to meet the deadline, and I am keen to continue developing it in the future. I found the django documentation quite good and the w3schools django documentation was also useful. Many thanks to my facilitator Alex for his help and understanding, and to my fellow student Guy who helped me get the CRUD functionality implemented into my project.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+## Code Attribution
+A small amount of template code was used from the Code Institute LMS, as well as some limited use of the LMS as a learning resource. I found the LMS exceptionally difficult to use as a reference, so I avoided it wherever possible. Some code was copied in from the [Django documentation](https://docs.djangoproject.com/en/5.1/).
 
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
-
-[The ERD](https://drive.google.com/file/d/1taSmwBJNRRTHOnL-nK3PCOBTC6TkU3Ns/view?usp=sharing)
+## Future Improvements
+### Sprint 2
+- I also want to implement the gallery I was unable to fit into sprint 1.
+- In addition to this I would like to investigate why the HTML validator broke and fix it, but I didn't have time to do so in sprint 1.
+- I would love to implement a user page so the user can edit their description and details and password without admin help.
