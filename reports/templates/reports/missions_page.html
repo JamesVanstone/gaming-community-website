@@ -21,15 +21,14 @@
                 <p>Location: {{ mission.location }}</p>
                 <p>Type: {{ mission.type }}</p>
                 <p>{{ mission.summary }}</p>
-                <p>Participants:
-                    <ul>
-                        {% for user in mission.participants.all %}
-                        <li>
-                            {{ user.username }}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </p>
+                <p>Participants:</p>
+                <ul>
+                    {% for user in mission.participants.all %}
+                    <li>
+                        {{ user.username }}
+                    </li>
+                    {% endfor %}
+                </ul>
             </li>
         {% endfor %}
     </ul>
